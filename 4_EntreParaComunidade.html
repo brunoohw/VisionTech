@@ -9,29 +9,49 @@
 
         function Formulario() {
             v1 = document.getElementById('nome').value
+
+            if (document.getElementById('nome').value == '' )
+            alert('É obrigatório o preenchimento do campo Nome!')
+            else
+                alert(`Você realizou o cadasrto ${v1} !`)
+
         }
 
     </script>
 </head>
-<body bgcolor="#brown" ><font color="#000000">
+<body bgcolor="brown"><font color="#000000">
 
-    <table width="900" align="center">
-        <tr>
-            <td>
-                <input type="text" id="nome" placeholder="Escreva seu nome completo" />
+    <table width="400" align="center" bgcolor="blue" cellpaddigns="100">
+            <td align="center">
+                <label>Escreva seu nome:</label>
+                    <tr align="center">
+                        <td><input type="text" id="nome" placeholder="Escreva seu nome completo" size="30" required/></td>
+                    </tr>
                 <tr>
-                    <td>
-                        <input type="text" id="telefone" placeholder="Escreva seu número de telefone" />
+                    <td align="center">
+                        <label>Escreva seu telefone:</label>
+                        <tr>
+                            <td align="center"><input type="text" id="telefone" placeholder="Escreva seu número de telefone" size="30" required/></td>
+                        </tr>
+                        
                     </td>
                 </tr>
 
                 <tr>
-                    <td>
-                        <input type="text" id="email" placeholder="Escreva seu e-mail" />
+                    <td align="center">
+                        <label>Escreva seu e-mail:</label>
+                        <tr align="center">
+                            <td><input type="text" id="email" placeholder="Escreva seu e-mail" size="30" required/></td>
+                        </tr>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center">
+                        <input type="button" value="Enviar" onclick="Formulario()" />
                     </td>
                 </tr>
             </td>
-        </tr>
     </table>
 
     <footer>
